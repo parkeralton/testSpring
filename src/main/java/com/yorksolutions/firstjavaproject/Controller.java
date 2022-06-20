@@ -31,7 +31,7 @@ public String listAllHeaders() throws UnknownHostException {
 
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
             String IP = request.getRemoteAddr();
-    return IP ;
+    return IP;
 }
 
 
