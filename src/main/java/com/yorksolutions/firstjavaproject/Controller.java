@@ -26,7 +26,7 @@ public class Controller {
 
     StringBuilder builder = new StringBuilder();
 
-    @GetMapping("/myIP")
+    @GetMapping("/")
 public String listAllHeaders() throws UnknownHostException {
 
             HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
