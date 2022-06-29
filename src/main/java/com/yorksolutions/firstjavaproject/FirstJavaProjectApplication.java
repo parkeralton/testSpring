@@ -10,22 +10,30 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
 import org.springframework.web.client.RestTemplate;
 
-
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+//exclude={DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class}
+@SpringBootApplication//(exclude = {DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class FirstJavaProjectApplication {
 
     public static void main(String[] args) {
 
+        Integer int1 = 127;
+        Integer int2 = 127;
+        Integer int3 = 128;
+        Integer int4 = 128;
+
+        System.out.println(int1==int2);
+        System.out.println(int3==int4);
+
         SpringApplication.run(FirstJavaProjectApplication.class, args);
         //String json = "{\"Name\":\"Parker\"}";
 //        String name = "parker";
-//        final var rest = new RestTemplate();
-//        JSONObject json = new JSONObject();
+        final var rest = new RestTemplate();
+        JSONObject json = new JSONObject();
 //        json.put("Name", "Parker");
 //        json.put("Area Code", 55104);
 //        json.put("Last Name", "Alton");
 //
-//        final var ipResponse = rest.getForEntity("http://ip.jsontest.com", String.class);
+        final var ipResponse = rest.getForEntity("http://ip.jsontest.com", String.class);
 //        final var headerResponse = rest.getForObject("http://header.jsontest.com", String.class);
 //        final var dateResponse = rest.getForObject("http://date.jsontest.com", String.class);
 //        final var echoResponse = rest.getForObject("http://echo.jsontest.com/test1/1/test2/2", String.class);
@@ -47,5 +55,5 @@ public class FirstJavaProjectApplication {
 //        System.out.println("cookieResponse " + cookieResponse);
 //        System.out.println("md5 1 " + md5Response);
 //        System.out.println("md5 2 " + md52Response);
- }
+    }
 }
